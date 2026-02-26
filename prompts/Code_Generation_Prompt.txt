@@ -1,0 +1,37 @@
+Given the following example of raw data format:
+stimulus (up = 0, left = 1, down = 2, right = 3)  side (right eye=0, left eye = 1)  size rgb response (up = 0, left = 1, down = 2, right = 3)  reaction_time cumulative_time is_correct
+3 1 20 32 3 0.80857  1.81437 1
+0 1 20 32 0 0.81165  3.64382 1
+3 1 10 32 3 0.72199  5.38185 1
+0 1 10 32 0 0.74794  7.15231 1
+3 1 10 32 3 0.72431  8.88838 1
+1 1 10 32 1 0.62406 10.53109 1
+0 1 10 32 0 0.99715 12.54914 1
+3 1 10 32 3 0.94271 14.50296 1
+2 1 10 32 2 0.74709 16.27277 1
+3 1  5 32 0 1.13137 18.41451 0
+3 1  5 32 3 1.24969 20.68090 1
+0 1  5 32 0 0.72345 22.41602 1
+1 1  5 32 0 1.18248 24.62048 0
+2 1  5 32 2 1.31128 26.94677 1
+
+And based on the following heuristic approach described in <step-by-step> and an example <calculation>:
+
+<step-by-step>
+{step_by_step_content}
+</step-by-step>
+
+<calculation>
+{calculation_content}
+</calculation>
+
+Please write a single Python function named `calculate_snellen_score_{contestant_id}`.
+
+This function must:
+1.  Accept one argument: `data_string`, a multi-line string representing trial data.
+2.  Parse the `data_string`. Each line corresponds to a trial with space-separated values. The columns are: `stimulus, side, size, rgb, response, reaction_time, cumulative_time, is_correct`.
+3.  Implement the exact logic described in the <step-by-step> section. The <calculation> provides a working example.
+4.  Return a single int value: the predicted Snellen score.
+5.  Be self-contained and rely only on standard Python libraries (e.g., `math`). Do not use any machine learning libraries like PyTorch or TensorFlow..
+6.  **Handle potential errors gracefully.** If the `data_string` is empty or malformed, return None.
+7.  Do NOT include any `print()` statements or example usage. The output must be only the function code.

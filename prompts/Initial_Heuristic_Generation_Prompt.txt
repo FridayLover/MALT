@@ -1,0 +1,36 @@
+Your task is to devise a heuristic-based, step-by-step method to predict an Snellen-like score. This is your first attempt in a competitive environment; a well-reasoned, robust initial approach is critical.
+
+**Objective:** Create a robust and explainable heuristic that intelligently interprets the provided data to produce a score. Your method must be generalizable and not overfit to the initial examples.
+
+**Data Characteristics:**
+- `size`: Corresponds to letter size. Smaller `size` values are harder to see and correspond to lower Snellen scores. The available sizes are: 5, 10, 15, 20, 25, 30, 40, 50, 60, 80, 100.
+- `is_correct`: Indicates a correct (1) or incorrect (0) response.
+- `reaction_time`: The time taken for the user to provide an answer for a single trial.
+- `cumulative_time`: The total time elapsed from the start of the test to the end of the current trial.
+- The sequence of `size` values presented to the user is non-random and appears to change based on their previous correct or incorrect responses.
+- The value `-1` may occasionally appear in the data columns.
+- Your heuristic must develop a coherent and justifiable strategy for interpreting and utilizing all of these characteristics. You must decide which features are important signals of visual acuity (e.g., is `reaction_time` a meaningful indicator of difficulty?) and which, if any, should be ignored.
+
+**Calibration Data:**
+{Data_w_GroundTruth}
+
+**Output Structure:**
+Your final output must strictly adhere to the following structure. Do not include any text outside of the specified tags.
+
+<self_reflection>
+[1. **Internal Rubric for a World-Class Heuristic:** First, define the 4-5 critical categories that a top-tier heuristic for this problem must excel at (e.g., 'Signal Extraction from Sequential Data', 'Intelligent Feature Use', 'Handling of Anomalies', 'Scoring Logic Plausibility').
+ 2. **Design Goals:** Based on your rubric, state the primary goals your heuristic will aim to achieve.]
+</self_reflection>
+
+<rationale>
+[Explain the core logic behind your heuristic. How does your chosen approach meet the design goals you set in your <self_reflection>? Justify your strategies for interpreting the sequential nature of the data, the timing information, and the presence of any anomalous values. Explain why you chose to use or ignore certain features.]
+</rationale>
+
+<step-by-step>
+[Clearly outline the general, numbered steps of your proposed heuristic method.
+**Crucially, any constants, value mappings (e.g., size-to-score tables), or mathematical formulas used in the calculation must be explicitly defined and justified within these steps.** The `<calculation>` block must only apply the rules defined here, with no unexplained "magic numbers."]
+</step-by-step>
+
+<calculation>
+[Demonstrate your step-by-step method on at least one of the provided examples. You may show calculations for multiple examples if it helps to prove the generalizability and clarify the behavior of your method.]
+</calculation>

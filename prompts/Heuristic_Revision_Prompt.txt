@@ -1,0 +1,52 @@
+You are in a competition to refine a heuristic algorithm. Your goal is to create a new algorithm that is demonstrably superior to your last to be the winner in this competition. A simple tweak is insufficient; you must re-evaluate your entire approach to win.
+
+**Your Performance Last Round:**
+{own_score_report}
+
+**Analysis Material:**
+1.  `loser_data_content`: An example where your previous algorithm performed poorly, or a style of data you must now master to defend your title.
+{loser_data_content}
+2.  `rival_heuristic`: he <step-by-step> logic and performance scores from all other competitors in the last round. Analyze them for strengths to emulate and weaknesses to exploit.
+{additional_content}
+
+**Task:**
+Your task is to perform a rigorous analysis and then produce a refined algorithm. Your new heuristic MUST be a clear improvement. Your thinking process must be laid out in the tags below.
+
+**Output Structure:**
+Your final output must strictly adhere to this structure.
+
+<self_reflection>
+[1. **Internal Rubric:** First, define the 5 key categories of a competition-winning heuristic for this specific problem (e.g., Threshold Detection Accuracy, Scoring Plausibility, Robustness to Noise, Penalty/Bonus Logic, Generalizability).
+ 2. **Self-Assessment:** Briefly state why your previous algorithm failed against this rubric.
+ 3. **Commitment to Improvement:** State your commitment to iterating internally until your new proposed heuristic meets the highest standards of your rubric, ensuring it is a fundamental improvement and not just a minor change. This new heuristic must outperform your previous one.]
+</self_reflection>
+
+<analysis>
+[**1. Self-Critique (Failure Analysis):**
+   - My previous heuristic's core logic was: [Summarize your last algorithm in 1-2 sentences].
+   - Applying my old logic to the `loser_data_content`, the predicted score would be [Show calculation and result]. The ground truth is [Insert ground truth score].
+   - The failure point, based on my rubric, was: [Pinpoint the specific reason for the error, linking it to one of your rubric categories from <self_reflection>. e.g., "My 'Threshold Detection' was too simplistic and was thrown off by a single correct answer at a small size."]
+
+**2. Rival Analysis:**
+   - The rival's heuristic differs from mine primarily in: [Describe the key logical difference, e.g., "It calculates a base score using a weighted average of all lines, rather than finding one specific threshold line."]
+   - This approach is superior against my rubric category [Category Name] because: [Explain why the rival's logic was more robust for this specific case.]
+
+**3. Proposed Refinement (New Strategy):**
+   - Based on this, I will discard/radically revise my logic. My new strategy is: [State the specific, targeted change or new approach. e.g., "I will adopt a per-letter scoring model. I will assign a base score of 100 and subtract penalty points for each line not read, weighted by the number of trials, plus a per-letter penalty for misses on lines easier than the threshold."]
+   - This new strategy directly addresses the failure point by [Explain how the change fixes the problem] and aims to score perfectly on my internal rubric.]
+</analysis>
+
+<step-by-step>
+[Clearly outline the general steps of your EVOLVED heuristic method.
+**Crucially, any constants, value mappings (e.g., size-to-score tables), or mathematical formulas used in the calculation must be explicitly defined and justified within these steps.** The `<calculation>` block must only apply the rules defined here, with no unexplained "magic numbers."]
+</step-by-step>
+
+<calculation>
+[Demonstrate the superiority and robustness of your evolved heuristic with two proofs.
+
+**Proof 1: Mastery of New Challenges**
+Apply your new method to the `loser_data_content`. Show the calculations to prove that your evolved logic now correctly handles this difficult case that challenged your previous approach.
+
+**Proof 2: Retention of Old Strengths (Backward-Compatibility)**
+Recall a data example from your history where your *old* algorithm performed well. Apply your new method to that same data. Show the calculations to prove that your score remains accurate, demonstrating that your evolution has not introduced new weaknesses (no regressions).]
+</calculation>
