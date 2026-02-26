@@ -2,6 +2,10 @@
 
 This repository contains the official code for our MICCAI 2026 paper, which implements a tournament-based multi-agent framework to generate and evolve lightweight, explainable heuristics for estimating Visual Acuity (VA) scores in Augmented Reality.
 
+### Customizing Prompts & Evolved Heuristics
+- **Prompts**: All the fundamental system prompts and generation instructions used by the LLM (e.g., initial heuristic generation, code generation, and iterative revision prompts) are stored in the `prompts/` directory. You can freely view and edit these prompt templates to adjust the LLM’s focus or the core logic rules it adheres to when creating heuristics.
+- **Evolved Algorithms**: All the final Python algorithms crafted by the agents (e.g., `left_eye_heuristic.py` and `right_eye_heuristic.py`) are located in the `evolved_heuristics_code/` directory. These reflect the successful products of the LLM tournament.
+
 ## Prerequisites
 
 To run this framework, you need:
@@ -64,3 +68,4 @@ By default, the codebase reads a generic `metadata.xlsx` (or custom data paths) 
 The original patient data consists of tabular `.csv` files tracking each individual trial. However, to preserve patient privacy, the mock data provided in this repository has had sensitive columns removed and is presented as whitespace-separated `.txt` files rather than pure CSVs. 
 
 Both the mock data provided in `mock_data/sample_input.txt` and the actual heuristic algorithms evolved by the LLM are designed to correctly parse this whitespace-separated, stripped-down text format.
+
