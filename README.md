@@ -4,7 +4,7 @@ This repository contains the official code for our MICCAI 2026 paper, which impl
 
 ### Customizing Prompts & Evolved Heuristics
 - **Prompts**: All the fundamental system prompts and generation instructions used by the LLM (e.g., initial heuristic generation, code generation, and iterative revision prompts) are stored in the `prompts/` directory. You can freely view and edit these prompt templates to adjust the LLM’s focus or the core logic rules it adheres to when creating heuristics.
-- **Evolved Algorithms**: All the final Python algorithms crafted by the agents (e.g., `left_eye_heuristic.py` and `right_eye_heuristic.py`) are located in the `evolved_heuristics_code/` directory. These reflect the successful products of the LLM tournament.
+- **Evolved Algorithms & Thinking**: All the final Python algorithms crafted by the agents (e.g., `left_eye_heuristic.py` and `right_eye_heuristic.py`) along with the LLM's detailed heuristic interpretations and Chain-of-Thought reasoning (the `.txt` files) are located in the `evolved_heuristic_and_code/` directory. These reflect the successful products of the LLM tournament, capturing both how the LLM interprets the heuristics and the final Python code it generates.
 
 ## Prerequisites
 
